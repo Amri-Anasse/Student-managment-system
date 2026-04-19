@@ -8,7 +8,7 @@ if (!ctype_digit($id)) {
     die('ID invalide');
 }
 
-$stmt = $pdo->prepare("SELECT * FROM etudiant WHERE id = ?");
+$stmt = $pdo->prepare("SELECT * FROM etudiants WHERE id = ?");
 $stmt->execute([$id]);
 $etudiant = $stmt->fetch();
 
